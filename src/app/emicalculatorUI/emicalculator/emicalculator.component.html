@@ -1,0 +1,17 @@
+<div>
+  <label>Amount: </label>
+  <input type="text" placeholder="Amount" [(ngModel)]="amount">
+  <p></p>
+
+  <label>Tennure(months): </label>
+  <input type="text" placeholder="months" [(ngModel)]="months">
+  <p></p>
+
+  <label>InterestRate(%): </label>
+  <input type="text" placeholder="Rate%" [(ngModel)]="interestRate">
+  <p></p>
+
+  <button (click)="calculateEMI()"> Calculate EMI </button>
+  <button (click)="clear()"> Clear </button>
+</div>
+

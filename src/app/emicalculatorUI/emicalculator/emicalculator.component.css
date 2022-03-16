@@ -1,0 +1,18 @@
+div {
+  background-color: lightblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+input {
+  padding: 10px;
+}
+
+label {
+  font-size: 17px;
+  margin-right: 20px;
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
+}
