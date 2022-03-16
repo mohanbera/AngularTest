@@ -8,20 +8,19 @@ import {EMICalculatorService} from "../../services/emicalculator.service";
 })
 export class EMISummeryComponent implements OnInit {
 
+  monthlyInterest: number = 0;
+  totalInterest: number = 0;
+  totalAmount: number = 0;
   constructor(private _emiCalculateService: EMICalculatorService) { }
 
   ngOnInit(): void {
+    this._emiCalculateService.getObservableRef().subscribe(data => {
+      this.monthlyInterest = data['monthlyEMI'];
+      this.totalInterest = data['totalInterest'];
+      this.totalAmount = data['totalAmount'];
+    })
   }
 
-  getMonthlyAmount(): number {
-    return this._emiCalculateService.getMonthlyEMI();
-  }
 
-  getTotalInterst(): number {
-    return this._emiCalculateService.getTotalInterest();
-  }
 
-  getTotalAmount(): number {
-    return this._emiCalculateService.getTotalAmount();
-  }
 }
